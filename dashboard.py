@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.express as px
+import plotly.express as px # type: ignore
 import pandas as pd
 import os
 import warnings
@@ -140,7 +140,7 @@ with chart2:
     st.plotly_chart(fig,use_container_width=True)
 
 # Summary tables
-import plotly.figure_factory as ff
+import plotly.figure_factory as ff # type: ignore
 st.subheader(":point_right: Month wise Sub-Category Sales Summary")
 with st.expander("Summary_Table"):
     df_sample = df[0:5][["Region","State","City","Category","Sales","Profit","Quantity"]]

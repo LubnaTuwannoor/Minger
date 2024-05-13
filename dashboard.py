@@ -252,6 +252,6 @@ def main():
     # Downloading the entire data
     csv = df.to_csv(index=False).encode('utf-8')
     st.download_button("Dowload Data", data=csv, file_name="Minge_SalesData_Set.csv", mime="text/csv",
-                       help='Click here to data as a CSV file')
+                       help='Click here to download the data as a CSV file')
 if __name__ == '__main__':
     main()

@@ -36,6 +36,7 @@ def market_basket_analysis(df):
     return rules, transaction_df
 
 def main():
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     st.set_page_config(page_title="Minger Sales Dashboard", page_icon=":bar_chart:", layout="wide")
     st.title(":bar_chart: Minger Sales Dashboard")
     st.markdown('<style>div.block-container{padding-top:1.5%;}</style>', unsafe_allow_html=True)
@@ -252,6 +253,6 @@ def main():
     # Downloading the entire data
     csv = df.to_csv(index=False).encode('utf-8')
     st.download_button("Dowload Data", data=csv, file_name="Minge_SalesData_Set.csv", mime="text/csv",
-                       help='Click here to download the data as a CSV file')
-if __name__ == '__main__':
+                       help='Click here to data as a CSV file')
+if __name__ == '_main_':
     main()
